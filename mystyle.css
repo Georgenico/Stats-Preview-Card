@@ -51,12 +51,6 @@ body {
   color: hsl(277, 64%, 61%);
 }
 
-.image {
-  height: 30rem;
-  width: 40rem;
-  background-color: hsl(277, 64%, 61%);
-  background-blend-mode: overlay;
-}
 .stats-container {
   width: 28rem;
 }
@@ -84,9 +78,25 @@ body {
   font-family: "Inter", sans-serif;
 }
 
-/* .image-container {
-  background-image: url(./images/image-header-desktop.jpg);
-  background-size: cover;
+.image-container {
   background-color: hsl(277, 64%, 61%);
   opacity: 0.5;
-} */
+  position: relative;
+}
+
+.image-container:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: hsl(277, 64%, 61%);
+  mix-blend-mode: multiply;
+}
+
+.image {
+  width: 40rem;
+  display: block;
+  height: auto;
+}
